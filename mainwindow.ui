@@ -20,11 +20,11 @@
       <x>170</x>
       <y>30</y>
       <width>441</width>
-      <height>661</height>
+      <height>591</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="dashPage">
      <widget class="QLabel" name="dateLabel">
@@ -51,45 +51,6 @@
       </property>
       <property name="text">
        <string>addButton</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="dashIcon">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>620</y>
-        <width>80</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>dashIcon</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="hwIcon">
-      <property name="geometry">
-       <rect>
-        <x>160</x>
-        <y>620</y>
-        <width>80</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>hwIcon</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="taskIcon">
-      <property name="geometry">
-       <rect>
-        <x>340</x>
-        <y>610</y>
-        <width>80</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>taskIcon</string>
       </property>
      </widget>
      <widget class="QLabel" name="assignmentLabel">
@@ -311,45 +272,6 @@
        <string>addButton2</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="dashIcon2">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>630</y>
-        <width>80</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>dashIcon2</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="hwIcon2">
-      <property name="geometry">
-       <rect>
-        <x>160</x>
-        <y>630</y>
-        <width>80</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>hwIcon2</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="taskIcon2">
-      <property name="geometry">
-       <rect>
-        <x>340</x>
-        <y>630</y>
-        <width>80</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>taskIcon2</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="taskPage">
      <widget class="QLabel" name="dateLabel3">
@@ -378,46 +300,46 @@
        <string>addButton3</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="dashIcon3">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>630</y>
-        <width>80</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>dashIcon3</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="hwIcon3">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>630</y>
-        <width>80</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>hwIcon3</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="taskIcon3">
-      <property name="geometry">
-       <rect>
-        <x>340</x>
-        <y>630</y>
-        <width>80</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>taskIcon3</string>
-      </property>
-     </widget>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="dashIcon">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>660</y>
+      <width>80</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>dashIcon</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="hwIcon">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>660</y>
+      <width>80</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>hwIcon</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="taskIcon">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>660</y>
+      <width>80</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>taskIcon</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -426,7 +348,7 @@
      <x>0</x>
      <y>0</y>
      <width>817</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

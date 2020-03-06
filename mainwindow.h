@@ -15,6 +15,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_hwIcon_clicked();
+
+    void on_dashIcon_clicked();
+
+    void on_taskIcon_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
