@@ -22,6 +22,8 @@ private slots:
 
     void on_taskIcon_clicked();
 
+    void on_submitTaskButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
