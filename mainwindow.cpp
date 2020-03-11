@@ -122,3 +122,8 @@ void MainWindow::on_submitTaskButton_clicked()
     ui->taskLabel4->setText(task4);
     ui->taskLabel5->setText(task5);
 }
+
+void MainWindow::on_addButton_clicked()
+{
+
+}
