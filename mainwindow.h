@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QDate>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,6 +26,8 @@ private slots:
     void on_submitTaskButton_clicked();
 
     void on_addButton_clicked();
+
+    void setCurrentDate();
 
 private:
     Ui::MainWindow *ui;

@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    setCurrentDate();
 }
 
 MainWindow::~MainWindow()
@@ -125,5 +126,17 @@ void MainWindow::on_submitTaskButton_clicked()
 
 void MainWindow::on_addButton_clicked()
 {
+
+}
+
+void MainWindow::setCurrentDate()
+{
+    QDate date = QDate::currentDate();
+
+    QString dateString = date.toString("ddd MMMM dd yyyy");
+
+    ui->dateLabel->setText(dateString);
+    ui->dateLabel2->setText(dateString);
+    ui->dateLabel3->setText(dateString);
 
 }
