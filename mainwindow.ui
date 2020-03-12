@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>817</width>
-    <height>761</height>
+    <width>822</width>
+    <height>961</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -71,12 +71,12 @@
        <rect>
         <x>20</x>
         <y>340</y>
-        <width>61</width>
+        <width>51</width>
         <height>21</height>
        </rect>
       </property>
       <property name="text">
-       <string>Tasks:l</string>
+       <string>Tasks:</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="hwLine1">
@@ -503,8 +503,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>817</width>
-     <height>21</height>
+     <width>822</width>
+     <height>29</height>
     </rect>
    </property>
   </widget>
