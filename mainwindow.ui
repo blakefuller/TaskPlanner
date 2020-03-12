@@ -20,7 +20,7 @@
       <x>180</x>
       <y>20</y>
       <width>471</width>
-      <height>591</height>
+      <height>611</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -84,7 +84,7 @@
        <rect>
         <x>20</x>
         <y>130</y>
-        <width>321</width>
+        <width>291</width>
         <height>31</height>
        </rect>
       </property>
@@ -94,7 +94,7 @@
        <rect>
         <x>20</x>
         <y>170</y>
-        <width>321</width>
+        <width>291</width>
         <height>31</height>
        </rect>
       </property>
@@ -104,7 +104,7 @@
        <rect>
         <x>20</x>
         <y>210</y>
-        <width>321</width>
+        <width>291</width>
         <height>31</height>
        </rect>
       </property>
@@ -114,7 +114,7 @@
        <rect>
         <x>20</x>
         <y>250</y>
-        <width>321</width>
+        <width>291</width>
         <height>31</height>
        </rect>
       </property>
@@ -124,7 +124,7 @@
        <rect>
         <x>20</x>
         <y>290</y>
-        <width>321</width>
+        <width>291</width>
         <height>31</height>
        </rect>
       </property>
@@ -132,7 +132,7 @@
      <widget class="QLineEdit" name="taskLine1">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>40</x>
         <y>370</y>
         <width>241</width>
         <height>31</height>
@@ -142,7 +142,7 @@
      <widget class="QLineEdit" name="taskLine4">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>40</x>
         <y>490</y>
         <width>241</width>
         <height>31</height>
@@ -152,7 +152,7 @@
      <widget class="QLineEdit" name="taskLine2">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>40</x>
         <y>410</y>
         <width>241</width>
         <height>31</height>
@@ -162,7 +162,7 @@
      <widget class="QLineEdit" name="taskLine3">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>40</x>
         <y>450</y>
         <width>241</width>
         <height>31</height>
@@ -172,7 +172,7 @@
      <widget class="QLineEdit" name="taskLine5">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>40</x>
         <y>530</y>
         <width>241</width>
         <height>31</height>
@@ -189,7 +189,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>CheckBox</string>
+       <string/>
       </property>
      </widget>
      <widget class="QCheckBox" name="checkBox_2">
@@ -202,7 +202,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>CheckBox</string>
+       <string/>
       </property>
      </widget>
      <widget class="QCheckBox" name="checkBox_3">
@@ -215,7 +215,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>CheckBox</string>
+       <string/>
       </property>
      </widget>
      <widget class="QCheckBox" name="checkBox_4">
@@ -228,7 +228,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>CheckBox</string>
+       <string/>
       </property>
      </widget>
      <widget class="QCheckBox" name="checkBox_5">
@@ -241,20 +241,70 @@
        </rect>
       </property>
       <property name="text">
-       <string>CheckBox</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="submitTaskButton">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>560</y>
+        <x>370</x>
+        <y>570</y>
         <width>75</width>
         <height>23</height>
        </rect>
       </property>
       <property name="text">
        <string>Submit</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="taskDate1">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>371</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="taskDate2">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>410</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="taskDate3">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>450</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="taskDate4">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>490</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="taskDate5">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>530</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
       </property>
      </widget>
     </widget>

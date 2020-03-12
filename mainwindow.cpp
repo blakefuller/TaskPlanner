@@ -30,14 +30,41 @@ void MainWindow::on_taskIcon_clicked()
     ui->stackedWidget->setCurrentIndex(2);
 }
 
+void MainWindow::on_taskDate1_userDateChanged(const QDate &date)
+{
+
+    date1 = date;
+}
+
+void MainWindow::on_taskDate2_userDateChanged(const QDate &date)
+{
+    date2 = date;
+}
+
+void MainWindow::on_taskDate3_userDateChanged(const QDate &date)
+{
+    date3 = date;
+}
+
+void MainWindow::on_taskDate4_userDateChanged(const QDate &date)
+{
+    date4 = date;
+}
+
+void MainWindow::on_taskDate5_userDateChanged(const QDate &date)
+{
+    date5 = date;
+}
+
 void MainWindow::on_submitTaskButton_clicked()
 {
     //gather the tasks from the user and put them in a string
-    QString task1 = ui->taskLine1->text();
-    QString task2 = ui->taskLine2->text();
-    QString task3 = ui->taskLine3->text();
-    QString task4 = ui->taskLine4->text();
-    QString task5 = ui->taskLine5->text();
+
+    task1 = ui->taskLine1->text();
+    task2 = ui->taskLine2->text();
+    task3 = ui->taskLine3->text();
+    task4 = ui->taskLine4->text();
+    task5 = ui->taskLine5->text();
     QString taskclear = "";
 
     //clear the current tasks
@@ -122,6 +149,8 @@ void MainWindow::on_submitTaskButton_clicked()
     ui->taskLabel3->setText(task3);
     ui->taskLabel4->setText(task4);
     ui->taskLabel5->setText(task5);
+
+    this->dueDateChecker();
 }
 
 void MainWindow::on_addButton_clicked()
@@ -131,12 +160,51 @@ void MainWindow::on_addButton_clicked()
 
 void MainWindow::setCurrentDate()
 {
-    QDate date = QDate::currentDate();
+    // get system date
+    curDate = QDate::currentDate();
 
-    QString dateString = date.toString("ddd MMMM dd yyyy");
+    dateString = curDate.toString("ddd MMMM dd yyyy");
 
+    //display system date
     ui->dateLabel->setText(dateString);
     ui->dateLabel2->setText(dateString);
     ui->dateLabel3->setText(dateString);
 
 }
+
+// checks if tasks are due
+// sends message box if so
+void MainWindow::dueDateChecker()
+{
+    QString dueTasks = "";
+
+    if(date1 <= curDate)
+    {
+        dueTasks += task1 + " is due!\n";
+    }
+
+    if(date2 <= curDate)
+    {
+        dueTasks += task2 + " is due!\n";
+    }
+
+    if(date3 <= curDate)
+    {
+        dueTasks += task3 + " is due!\n";
+    }
+
+    if(date4 <= curDate)
+    {
+        dueTasks += task4 + " is due!\n";
+    }
+
+    if(date5 <= curDate)
+    {
+        dueTasks += task5 + " is due!\n";
+    }
+
+
+    msgBox.setText(dueTasks);
+    msgBox.exec();
+}
+
