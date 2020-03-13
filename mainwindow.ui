@@ -335,6 +335,16 @@ color: rgb(21, 21, 21);
        <string notr="true">background-color: rgb(185, 185, 185);
 color: rgb(21, 21, 21);</string>
       </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+      <property name="date">
+       <date>
+        <year>2020</year>
+        <month>1</month>
+        <day>1</day>
+       </date>
+      </property>
      </widget>
      <widget class="QDateEdit" name="taskDate2">
       <property name="geometry">
@@ -348,6 +358,16 @@ color: rgb(21, 21, 21);</string>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(185, 185, 185);
 color: rgb(21, 21, 21);</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+      <property name="date">
+       <date>
+        <year>2020</year>
+        <month>1</month>
+        <day>1</day>
+       </date>
       </property>
      </widget>
      <widget class="QDateEdit" name="taskDate3">
@@ -363,6 +383,16 @@ color: rgb(21, 21, 21);</string>
        <string notr="true">background-color: rgb(185, 185, 185);
 color: rgb(21, 21, 21);</string>
       </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+      <property name="date">
+       <date>
+        <year>2020</year>
+        <month>1</month>
+        <day>1</day>
+       </date>
+      </property>
      </widget>
      <widget class="QDateEdit" name="taskDate4">
       <property name="geometry">
@@ -377,6 +407,16 @@ color: rgb(21, 21, 21);</string>
        <string notr="true">background-color: rgb(185, 185, 185);
 color: rgb(21, 21, 21);</string>
       </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+      <property name="date">
+       <date>
+        <year>2020</year>
+        <month>1</month>
+        <day>1</day>
+       </date>
+      </property>
      </widget>
      <widget class="QDateEdit" name="taskDate5">
       <property name="geometry">
@@ -390,6 +430,16 @@ color: rgb(21, 21, 21);</string>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(185, 185, 185);
 color: rgb(21, 21, 21);</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+      <property name="date">
+       <date>
+        <year>2020</year>
+        <month>1</month>
+        <day>1</day>
+       </date>
       </property>
      </widget>
      <widget class="QPushButton" name="dashIcon">
@@ -620,7 +670,7 @@ background-color:transparent;</string>
      <x>0</x>
      <y>0</y>
      <width>716</width>
-     <height>29</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
