@@ -19,8 +19,8 @@
      <rect>
       <x>180</x>
       <y>50</y>
-      <width>391</width>
-      <height>851</height>
+      <width>381</width>
+      <height>771</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -442,57 +442,6 @@ color: rgb(21, 21, 21);</string>
        </date>
       </property>
      </widget>
-     <widget class="QPushButton" name="dashIcon">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>790</y>
-        <width>31</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-image: url(:/Images/Images/cube dashboard.png);
-background-color:transparent;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="taskIcon">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>780</y>
-        <width>41</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-image: url(:/Images/Images/checklist.png);
-background-color:transparent;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="hwIcon">
-      <property name="geometry">
-       <rect>
-        <x>170</x>
-        <y>780</y>
-        <width>61</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-image: url(:/Images/Images/homework.png);
-background-color:transparent;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="hwPage">
      <widget class="QLabel" name="dateLabel2">
@@ -661,8 +610,62 @@ background-color:transparent;</string>
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="taskIcon">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>830</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Images/Images/checklist.png);
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dashIcon">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>840</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Images/Images/cube dashboard.png);
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="hwIcon">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>830</y>
+      <width>61</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Images/Images/homework.png);
+background-color:transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>stackedWidget</zorder>
+   <zorder>taskIcon</zorder>
+   <zorder>dashIcon</zorder>
+   <zorder>hwIcon</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
