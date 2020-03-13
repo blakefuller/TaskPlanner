@@ -122,21 +122,11 @@ background-color:transparent;</string>
        <string notr="true">background-color: rgb(185, 185, 185);</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="hwLine3">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>300</y>
-        <width>291</width>
-        <height>31</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QLineEdit" name="hwLine4">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>360</y>
+        <y>340</y>
         <width>321</width>
         <height>31</height>
        </rect>
@@ -149,7 +139,7 @@ background-color:transparent;</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>310</y>
+        <y>380</y>
         <width>321</width>
         <height>31</height>
        </rect>
@@ -442,6 +432,19 @@ color: rgb(21, 21, 21);</string>
        </date>
       </property>
      </widget>
+     <widget class="QLineEdit" name="hwLine3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>300</y>
+        <width>321</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(185, 185, 185);</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="hwPage">
      <widget class="QLabel" name="dateLabel2">
@@ -460,8 +463,8 @@ color: rgb(21, 21, 21);</string>
      <widget class="QPushButton" name="addButton2">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>30</y>
+        <x>290</x>
+        <y>20</y>
         <width>80</width>
         <height>22</height>
        </rect>
@@ -488,7 +491,7 @@ color: rgb(21, 21, 21);</string>
      <widget class="QPushButton" name="addButton3">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>290</x>
         <y>20</y>
         <width>80</width>
         <height>22</height>
@@ -501,7 +504,7 @@ color: rgb(21, 21, 21);</string>
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>10</x>
         <y>90</y>
         <width>211</width>
         <height>271</height>
@@ -673,7 +676,7 @@ background-color:transparent;</string>
      <x>0</x>
      <y>0</y>
      <width>716</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
