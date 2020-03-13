@@ -178,33 +178,25 @@ void MainWindow::dueDateChecker()
 {
     QString dueTasks = "";
 
-    if(date1 <= curDate)
-    {
+    if(task1 != "" && date1 <= curDate)
         dueTasks += task1 + " is due!\n";
-    }
 
-    if(date2 <= curDate)
-    {
+    if(task2 != "" && date2 <= curDate)
         dueTasks += task2 + " is due!\n";
-    }
 
-    if(date3 <= curDate)
-    {
+    if(task3 != "" && date3 <= curDate)
         dueTasks += task3 + " is due!\n";
-    }
 
-    if(date4 <= curDate)
-    {
+    if(task4 != "" && date4 <= curDate)
         dueTasks += task4 + " is due!\n";
-    }
 
-    if(date5 <= curDate)
-    {
+    if(task5 != "" && date5 <= curDate)
         dueTasks += task5 + " is due!\n";
+
+    if(dueTasks != "")
+    {
+        msgBox.setText(dueTasks);
+        msgBox.exec();
     }
-
-
-    msgBox.setText(dueTasks);
-    msgBox.exec();
 }
 
