@@ -59,7 +59,6 @@ void MainWindow::on_taskDate5_userDateChanged(const QDate &date)
 void MainWindow::on_submitTaskButton_clicked()
 {
     //gather the tasks from the user and put them in a string
-
     task1 = ui->taskLine1->text();
     task2 = ui->taskLine2->text();
     task3 = ui->taskLine3->text();
@@ -67,12 +66,16 @@ void MainWindow::on_submitTaskButton_clicked()
     task5 = ui->taskLine5->text();
     QString taskclear = "";
 
+
+
     //clear the current tasks
     ui->taskLabel1->setText(taskclear);
     ui->taskLabel2->setText(taskclear);
     ui->taskLabel3->setText(taskclear);
     ui->taskLabel4->setText(taskclear);
     ui->taskLabel5->setText(taskclear);
+
+
 
 
     //make it so the tasks are always ordered from top to bottom
@@ -200,3 +203,11 @@ void MainWindow::dueDateChecker()
     }
 }
 
+
+void MainWindow::on_TEST_clicked()
+{
+    QString lastTask = tasks[tasks.size()];
+    ui->taskLabel1->setText(lastTask);
+
+
+}

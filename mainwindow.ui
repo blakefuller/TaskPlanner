@@ -445,6 +445,19 @@ color: rgb(21, 21, 21);</string>
        <string notr="true">background-color: rgb(185, 185, 185);</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="TEST">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>450</y>
+        <width>89</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TESTJJ</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="hwPage">
      <widget class="QLabel" name="dateLabel2">

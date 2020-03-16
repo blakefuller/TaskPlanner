@@ -5,6 +5,7 @@
 #include <QDate>
 #include <QMessageBox>
 #include <QStringList>
+#include <vector>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -43,6 +44,8 @@ private slots:
 
     void dueDateChecker();
 
+    void on_TEST_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString task1;
@@ -51,6 +54,7 @@ private:
     QString task4;
     QString task5;
     QString dateString;
+    QVector <QString> tasks;
 
     QDate curDate;
     QDate date1;
