@@ -458,6 +458,38 @@ color: rgb(21, 21, 21);</string>
        <string>TESTJJ</string>
       </property>
      </widget>
+     <widget class="QWidget" name="addWidget" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>39</x>
+        <y>90</y>
+        <width>281</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:lightgray;</string>
+      </property>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>30</y>
+         <width>58</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>testink</string>
+       </property>
+      </widget>
+     </widget>
     </widget>
     <widget class="QWidget" name="hwPage">
      <widget class="QLabel" name="dateLabel2">
@@ -689,7 +721,7 @@ background-color:transparent;</string>
      <x>0</x>
      <y>0</y>
      <width>716</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

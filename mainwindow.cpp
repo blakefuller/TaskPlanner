@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     setCurrentDate();
+    ui->addWidget->hide();
 }
 
 MainWindow::~MainWindow()
@@ -162,7 +163,14 @@ void MainWindow::on_submitTaskButton_clicked()
 
 void MainWindow::on_addButton_clicked()
 {
-
+    if(!ui->addWidget->isVisible())
+    {
+        ui->addWidget->show();
+    }
+    else
+    {
+        ui->addWidget->hide();
+    }
 }
 
 void MainWindow::setCurrentDate()
