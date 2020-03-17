@@ -8,12 +8,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     setCurrentDate();
     ui->addWidget->hide();
+    tasks.clear();
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    tasks.clear();
 }
 
 
@@ -60,9 +60,6 @@ void MainWindow::on_taskDate5_userDateChanged(const QDate &date)
 
 void MainWindow::on_submitTaskButton_clicked()
 {
-    tasks.append(ui->taskLine1->text());
-    ui->taskLabel4->setText(tasks.last());
-
     //gather the tasks from the user and put them in a string
 //    task1 = ui->taskLine1->text();
 //    task2 = ui->taskLine2->text();
@@ -182,8 +179,6 @@ void MainWindow::setCurrentDate()
 
     //display system date
     ui->dateLabel->setText(dateString);
-    ui->dateLabel2->setText(dateString);
-    ui->dateLabel3->setText(dateString);
 
 }
 
@@ -218,6 +213,8 @@ void MainWindow::dueDateChecker()
 
 void MainWindow::on_TEST_clicked()
 {
-    tasks.removeLast();
-    ui->taskLabel5->setText(tasks.last());
+//    tasks.removeLast();
+//    ui->taskLabel5->setText(tasks.last());
+    tasks.append(ui->taskTitle->text());
+    ui->taskLabel4->setText(tasks.last());
 }
