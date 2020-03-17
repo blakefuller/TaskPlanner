@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     setCurrentDate();
     ui->addWidget->hide();
+    homeworks.clear();
     tasks.clear();
 }
 
@@ -217,4 +218,30 @@ void MainWindow::on_TEST_clicked()
 //    ui->taskLabel5->setText(tasks.last());
     tasks.append(ui->taskTitle->text());
     ui->taskLabel4->setText(tasks.last());
+}
+
+void MainWindow::on_taskAdd_clicked()
+{
+    if(!ui->taskTitle->text().isEmpty())
+    {
+        tasks.append(ui->taskTitle->text());
+        ui->taskLabel4->setText(tasks.last());
+    }
+}
+
+void MainWindow::on_homeworkAdd_clicked()
+{
+    if(!ui->homeworkTitle->text().isEmpty())
+    {
+        QString title = ui->homeworkTitle->text();
+        homeworks.append(title);
+        if(ui->homeworkLayout->count() < 5)
+        {
+            QString label = title + "\t" + ui->homeworkDate->text();
+            QLabel *homework = new QLabel(label);
+            homework->setFixedWidth(300);
+            homework->setScaledContents(true);
+            ui->homeworkLayout->addWidget(homework);
+        }
+    }
 }

@@ -46,6 +46,10 @@ private slots:
 
     void on_TEST_clicked();
 
+    void on_taskAdd_clicked();
+
+    void on_homeworkAdd_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString task1;
@@ -54,6 +58,7 @@ private:
     QString task4;
     QString task5;
     QString dateString;
+    QVector <QString> homeworks;
     QVector <QString> tasks;
 
     QDate curDate;

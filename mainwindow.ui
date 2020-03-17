@@ -62,58 +62,6 @@
        <string>Tasks:</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="hwLine1">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>90</y>
-        <width>321</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(185, 185, 185);</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="hwLine2">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>130</y>
-        <width>321</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(185, 185, 185);</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="hwLine4">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>210</y>
-        <width>321</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(185, 185, 185);</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="hwLine5">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>250</y>
-        <width>321</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(185, 185, 185);</string>
-      </property>
-     </widget>
      <widget class="QLineEdit" name="taskLine4">
       <property name="geometry">
        <rect>
@@ -361,18 +309,20 @@ color: rgb(21, 21, 21);</string>
        </date>
       </property>
      </widget>
-     <widget class="QLineEdit" name="hwLine3">
+     <widget class="QWidget" name="verticalLayoutWidget">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>170</y>
-        <width>321</width>
-        <height>31</height>
+        <y>80</y>
+        <width>341</width>
+        <height>251</height>
        </rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(185, 185, 185);</string>
-      </property>
+      <layout class="QVBoxLayout" name="homeworkLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="hwPage"/>
@@ -581,7 +531,7 @@ background-color:transparent;</string>
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>140</y>
+      <y>160</y>
       <width>281</width>
       <height>231</height>
      </rect>
