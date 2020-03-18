@@ -101,27 +101,20 @@ void MainWindow::on_taskAdd_clicked()
 {
     if(!ui->taskTitle->text().isEmpty())
     {
-        QString title = ui->taskTitle->text();
-        QDate date = ui->taskDate->date();
-        tasks.append(title);
-        taskDates.append(date);
+        TaskInfo *info = new TaskInfo();
+        info->title = ui->taskTitle->text();
+        info->date = ui->taskDate->date();
+        this->taskInfo.append(*info);
+
+        this->sortDate(taskInfo);
 
         if(ui->taskLayout->count() < 5)
         {
-            QString label = title + "\t" + date.toString("MM/dd/yyyy");
-            QLabel *task = new QLabel(label);
-            task->setFixedWidth(300);
-            task->setScaledContents(true);
-            ui->taskLayout->addWidget(task);
-            ui->taskLayout->setAlignment(Qt::AlignTop);
+            this->removeLayout(ui->taskLayout);
+            this->addLayout(ui->taskLayout, taskInfo);
         }
-
-        QString display = title + "\t" + ui->taskDate->text();
-        QLabel *taskDisplay = new QLabel(display);
-        taskDisplay->setFixedWidth(300);
-        taskDisplay->setScaledContents(true);
-        ui->taskFullLayout->addWidget(taskDisplay);
-        ui->taskFullLayout->setAlignment(Qt::AlignTop);
+        this->removeLayout(ui->taskFullLayout);
+        this->addLayout(ui->taskFullLayout, taskInfo);
     }
 
     this->dueDateChecker();
@@ -131,75 +124,82 @@ void MainWindow::on_homeworkAdd_clicked()
 {
     if(!ui->homeworkTitle->text().isEmpty())
     {
-        QString title = ui->homeworkTitle->text();
-        QDate date = ui->homeworkDate->date();
-        homeworks.append(title);
-        homeworkDates.append(date);
+        HomeworkInfo *info = new HomeworkInfo();
+        info->title = ui->homeworkTitle->text();
+        info->date = ui->homeworkDate->date();
+        this->homeworkInfo.append(*info);
+
+        this->sortDate(homeworkInfo);
 
         if(ui->homeworkLayout->count() < 5)
         {
-            QString label = title + "\t" + date.toString("MM/dd/yyyy");
-            QLabel *homework = new QLabel(label);
-            homework->setFixedWidth(300);
-            homework->setScaledContents(true);
-            ui->homeworkLayout->addWidget(homework);
-            ui->homeworkLayout->setAlignment(Qt::AlignTop);
+            this->removeLayout(ui->homeworkLayout);
+            this->addLayout(ui->homeworkLayout, homeworkInfo);
         }
-
-        QString display = title + "\t" + ui->homeworkDate->text();
-        QLabel *hwDisplay = new QLabel(display);
-        hwDisplay->setFixedWidth(300);
-        hwDisplay->setScaledContents(true);
-        ui->hwFullLayout->addWidget(hwDisplay);
-        ui->hwFullLayout->setAlignment(Qt::AlignTop);
-
+        this->removeLayout(ui->hwFullLayout);
+        this->addLayout(ui->hwFullLayout, homeworkInfo);
 
     }
 
     this->dueDateChecker();
 }
 
-void MainWindow::sortDate(QVector<QDate> date, QVector<QString> item)
+void MainWindow::sortDate(QVector<HomeworkInfo> &homeworkInfo)
 {
-    int size = date.length();
+    int size = homeworkInfo.length();
     QDate tempDate;
     QString tempItem;
     bool swapped = false;
 
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < size-1; i++)
     {
         swapped = false;
-        for (int j = 0; j < size - i; j++)
+        for (int j = 0; j < size-i-1; j++)
         {
-            tempDate = date[j];
-            date[j] = date[j+1];
-            date[j+1] = tempDate;
+            if(homeworkInfo[j].date > homeworkInfo[j+1].date)
+            {
+                tempDate = homeworkInfo[j].date;
+                homeworkInfo[j].date = homeworkInfo[j+1].date;
+                homeworkInfo[j+1].date = tempDate;
 
-            tempItem = item[j];
-            item[j] = item[j+1];
-            item[j+1] = tempItem;
-
+                tempItem = homeworkInfo[j].title;
+                homeworkInfo[j].title = homeworkInfo[j+1].title;
+                homeworkInfo[j+1].title = tempItem;
+            }
             swapped = true;
         }
+        if(swapped == false)
+            break;
     }
 }
 
-void MainWindow::on_sortDates_clicked()
+void MainWindow::sortDate(QVector<TaskInfo> &taskInfo)
 {
-//    this->sortDate(taskDates, tasks);
-//    this->sortDate(homeworkDates, homeworks);
+    int size = taskInfo.length();
+    QDate tempDate;
+    QString tempItem;
+    bool swapped = false;
 
-    std::sort(homeworkDates.begin(), homeworkDates.end());
+    for (int i = 0; i < size-1; i++)
+    {
+        swapped = false;
+        for (int j = 0; j < size-i-1; j++)
+        {
+            if(taskInfo[j].date > taskInfo[j+1].date)
+            {
+                tempDate = taskInfo[j].date;
+                taskInfo[j].date = taskInfo[j+1].date;
+                taskInfo[j+1].date = tempDate;
 
-    this->removeLayout(ui->taskLayout);
-    this->removeLayout(ui->homeworkLayout);
-    this->removeLayout(ui->taskFullLayout);
-    this->removeLayout(ui->hwFullLayout);
-
-    this->addLayout(5, ui->taskLayout, taskDates, tasks);
-    this->addLayout(5, ui->homeworkLayout, homeworkDates, homeworks);
-    this->addLayout(tasks.length(), ui->taskFullLayout, taskDates, tasks);
-    this->addLayout(homeworks.length(), ui->hwFullLayout, homeworkDates, homeworks);
+                tempItem = taskInfo[j].title;
+                taskInfo[j].title = taskInfo[j+1].title;
+                taskInfo[j+1].title = tempItem;
+            }
+            swapped = true;
+        }
+        if(swapped == false)
+            break;
+    }
 }
 
 void MainWindow::removeLayout(QLayout *layout)
@@ -222,9 +222,9 @@ void MainWindow::removeLayout(QLayout *layout)
     }
 }
 
-void MainWindow::addLayout(int length, QLayout *layout, QVector<QDate> dates, QVector<QString> items)
+void MainWindow::addLayout(QLayout *layout, QVector<HomeworkInfo> homeworkInfo)
 {
-    int size = dates.length();
+    int size = homeworkInfo.length();
     QString title;
     QDate date;
     QString display;
@@ -232,19 +232,40 @@ void MainWindow::addLayout(int length, QLayout *layout, QVector<QDate> dates, QV
 
     if(size != 0)
     {
-        if(layout->count() < length)
+        for (int i = 0; i < size; i++)
         {
-            for (int i = 0; i < size; i++)
-            {
-                title = items[i];
-                date = dates[i];
-                display = title + "\t" + date.toString("MM/dd/yyyy");
-                QLabel *hwDisplay = new QLabel(display);
-                hwDisplay->setFixedWidth(300);
-                hwDisplay->setScaledContents(true);
-                layout->addWidget(hwDisplay);
-                layout->setAlignment(Qt::AlignTop);
-            }
+            title = homeworkInfo[i].title;
+            date = homeworkInfo[i].date;
+            display = title + "\t" + date.toString("MM/dd/yyyy");
+            QLabel *hwDisplay = new QLabel(display);
+            hwDisplay->setFixedWidth(300);
+            hwDisplay->setScaledContents(true);
+            layout->addWidget(hwDisplay);
+            layout->setAlignment(Qt::AlignTop);
+        }
+    }
+}
+
+void MainWindow::addLayout(QLayout *layout, QVector<TaskInfo> taskInfo)
+{
+    int size = taskInfo.length();
+    QString title;
+    QDate date;
+    QString display;
+
+
+    if(size != 0)
+    {
+        for (int i = 0; i < size; i++)
+        {
+            title = taskInfo[i].title;
+            date = taskInfo[i].date;
+            display = title + "\t" + date.toString("MM/dd/yyyy");
+            QLabel *hwDisplay = new QLabel(display);
+            hwDisplay->setFixedWidth(300);
+            hwDisplay->setScaledContents(true);
+            layout->addWidget(hwDisplay);
+            layout->setAlignment(Qt::AlignTop);
         }
     }
 }

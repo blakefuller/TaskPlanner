@@ -6,11 +6,23 @@
 #include <QMessageBox>
 #include <QStringList>
 #include <vector>
-#include <QtAlgorithms>
+#include <QDebug>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
+
+struct HomeworkInfo
+{
+    QString title;
+    QDate date;
+};
+
+struct TaskInfo
+{
+    QString title;
+    QDate date;
+};
 
 class MainWindow : public QMainWindow
 {
@@ -37,13 +49,15 @@ private slots:
 
     void on_homeworkAdd_clicked();
 
-    void sortDate(QVector <QDate> date, QVector <QString> item);
+    void sortDate(QVector <HomeworkInfo>& homeworkInfo);
 
-    void on_sortDates_clicked();
+    void sortDate(QVector <TaskInfo>& taskInfo);
 
     void removeLayout(QLayout *layout);
 
-    void addLayout(int length, QLayout *layout, QVector<QDate> date, QVector<QString> item);
+    void addLayout(QLayout *layout, QVector<HomeworkInfo> homeworkInfo);
+
+    void addLayout(QLayout *layout, QVector<TaskInfo> taskInfo);
 
 private:
     Ui::MainWindow *ui;
@@ -54,8 +68,10 @@ private:
     QVector <QDate> homeworkDates;
     QVector <QString> tasks;
     QVector <QDate> taskDates;
-
     QDate curDate;
+
+    QVector <HomeworkInfo> homeworkInfo;
+    QVector <TaskInfo> taskInfo;
 
     QMessageBox msgBox;
 };
