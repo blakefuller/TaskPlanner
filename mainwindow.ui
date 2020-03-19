@@ -27,7 +27,7 @@
      <string notr="true">background-color:transparent;</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="dashPage">
      <widget class="QLabel" name="assignmentLabel">
@@ -582,24 +582,10 @@ background-color:transparent;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="sortDates">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>770</y>
-      <width>92</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>sortDates</string>
-    </property>
-   </widget>
    <zorder>label</zorder>
    <zorder>stackedWidget</zorder>
    <zorder>dateLabel</zorder>
    <zorder>addButton</zorder>
-   <zorder>sortDates</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
