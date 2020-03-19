@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>190</y>
-      <width>381</width>
-      <height>631</height>
+      <y>140</y>
+      <width>371</width>
+      <height>601</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -34,41 +34,43 @@
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>40</y>
-        <width>101</width>
+        <y>10</y>
+        <width>121</width>
         <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(21, 21, 21);</string>
+       <string notr="true">color: rgb(21, 21, 21);
+font: 75 10pt &quot;Century Gothic&quot;;</string>
       </property>
       <property name="text">
-       <string>Assignments:</string>
+       <string>Assignments</string>
       </property>
      </widget>
      <widget class="QLabel" name="taskslabel">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>340</y>
+        <y>360</y>
         <width>51</width>
         <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(21, 21, 21);</string>
+       <string notr="true">color: rgb(21, 21, 21);
+font: 75 10pt &quot;Century Gothic&quot;;</string>
       </property>
       <property name="text">
-       <string>Tasks:</string>
+       <string>Tasks</string>
       </property>
      </widget>
      <widget class="QWidget" name="verticalLayoutWidget">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>80</y>
-        <width>341</width>
-        <height>251</height>
+        <y>60</y>
+        <width>331</width>
+        <height>281</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="homeworkLayout">
@@ -84,9 +86,9 @@
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>370</y>
-        <width>341</width>
-        <height>251</height>
+        <y>390</y>
+        <width>331</width>
+        <height>201</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="taskLayout">
@@ -95,6 +97,213 @@
        </property>
       </layout>
      </widget>
+     <widget class="QWidget" name="addWidget" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>0</y>
+        <width>271</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:lightgray;</string>
+      </property>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>30</y>
+         <width>58</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>testink</string>
+       </property>
+      </widget>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>251</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="homeworkTab">
+        <attribute name="title">
+         <string>Homework</string>
+        </attribute>
+        <widget class="QLineEdit" name="homeworkTitle">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>121</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(185, 185, 185);</string>
+         </property>
+        </widget>
+        <widget class="QDateEdit" name="homeworkDate">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>80</y>
+           <width>121</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(185, 185, 185);
+color: rgb(21, 21, 21);</string>
+         </property>
+         <property name="calendarPopup">
+          <bool>true</bool>
+         </property>
+         <property name="date">
+          <date>
+           <year>2020</year>
+           <month>1</month>
+           <day>1</day>
+          </date>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="homeworkAdd">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>130</y>
+           <width>89</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Add</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>58</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Title</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>58</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Due Date</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="taskTab">
+        <attribute name="title">
+         <string>Tasks</string>
+        </attribute>
+        <widget class="QLineEdit" name="taskTitle">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>121</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(185, 185, 185);</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="taskAdd">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>130</y>
+           <width>89</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Add</string>
+         </property>
+        </widget>
+        <widget class="QDateEdit" name="taskDate">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>80</y>
+           <width>121</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(185, 185, 185);
+color: rgb(21, 21, 21);</string>
+         </property>
+         <property name="calendarPopup">
+          <bool>true</bool>
+         </property>
+         <property name="date">
+          <date>
+           <year>2020</year>
+           <month>1</month>
+           <day>1</day>
+          </date>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>58</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Title</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>58</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Due Date</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
     </widget>
     <widget class="QWidget" name="hwPage">
      <widget class="QWidget" name="verticalLayoutWidget_2">
@@ -102,11 +311,28 @@
        <rect>
         <x>20</x>
         <y>60</y>
-        <width>341</width>
+        <width>321</width>
         <height>571</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="hwFullLayout"/>
+     </widget>
+     <widget class="QLabel" name="assignmentLabel_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(21, 21, 21);
+font: 75 10pt &quot;Century Gothic&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Assignments</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="taskPage">
@@ -115,11 +341,28 @@
        <rect>
         <x>20</x>
         <y>60</y>
-        <width>341</width>
+        <width>321</width>
         <height>571</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="taskFullLayout"/>
+     </widget>
+     <widget class="QLabel" name="taskslabel_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(21, 21, 21);
+font: 75 10pt &quot;Century Gothic&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Tasks</string>
+      </property>
      </widget>
     </widget>
    </widget>
@@ -150,8 +393,8 @@ background-color:transparent;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/Images/Images/checklist.png);
-background-color:transparent;</string>
+     <string notr="true">background-color:transparent;
+border-image: url(:/Images/Images/list.png);</string>
     </property>
     <property name="text">
      <string/>
@@ -167,7 +410,7 @@ background-color:transparent;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/Images/Images/cube dashboard.png);
+     <string notr="true">border-image: url(:/Images/Images/highlighted dashboard.png);
 background-color:transparent;</string>
     </property>
     <property name="text">
@@ -194,18 +437,18 @@ background-color:transparent;</string>
    <widget class="QLabel" name="dateLabel">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>210</x>
       <y>100</y>
-      <width>181</width>
+      <width>251</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(21, 21, 21);
-font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 75 12pt &quot;Century Gothic&quot;;</string>
     </property>
     <property name="text">
-     <string>Today, March 11</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="addButton">
@@ -225,218 +468,11 @@ background-color:transparent;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QWidget" name="addWidget" native="true">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>140</y>
-      <width>281</width>
-      <height>231</height>
-     </rect>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:lightgray;</string>
-    </property>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>30</y>
-       <width>58</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>testink</string>
-     </property>
-    </widget>
-    <widget class="QTabWidget" name="tabWidget">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>261</width>
-       <height>211</height>
-      </rect>
-     </property>
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
-     <widget class="QWidget" name="homeworkTab">
-      <attribute name="title">
-       <string>Homework</string>
-      </attribute>
-      <widget class="QLineEdit" name="homeworkTitle">
-       <property name="geometry">
-        <rect>
-         <x>90</x>
-         <y>40</y>
-         <width>121</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(185, 185, 185);</string>
-       </property>
-      </widget>
-      <widget class="QDateEdit" name="homeworkDate">
-       <property name="geometry">
-        <rect>
-         <x>90</x>
-         <y>80</y>
-         <width>121</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(185, 185, 185);
-color: rgb(21, 21, 21);</string>
-       </property>
-       <property name="calendarPopup">
-        <bool>true</bool>
-       </property>
-       <property name="date">
-        <date>
-         <year>2020</year>
-         <month>1</month>
-         <day>1</day>
-        </date>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="homeworkAdd">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>130</y>
-         <width>89</width>
-         <height>28</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Add</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_5">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>40</y>
-         <width>58</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Title</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_6">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>80</y>
-         <width>58</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Due Date</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="taskTab">
-      <attribute name="title">
-       <string>Tasks</string>
-      </attribute>
-      <widget class="QLineEdit" name="taskTitle">
-       <property name="geometry">
-        <rect>
-         <x>90</x>
-         <y>40</y>
-         <width>121</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(185, 185, 185);</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="taskAdd">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>130</y>
-         <width>89</width>
-         <height>28</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Add</string>
-       </property>
-      </widget>
-      <widget class="QDateEdit" name="taskDate">
-       <property name="geometry">
-        <rect>
-         <x>90</x>
-         <y>80</y>
-         <width>121</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(185, 185, 185);
-color: rgb(21, 21, 21);</string>
-       </property>
-       <property name="calendarPopup">
-        <bool>true</bool>
-       </property>
-       <property name="date">
-        <date>
-         <year>2020</year>
-         <month>1</month>
-         <day>1</day>
-        </date>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_3">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>40</y>
-         <width>58</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Title</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_4">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>80</y>
-         <width>58</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Due Date</string>
-       </property>
-      </widget>
-     </widget>
-    </widget>
-   </widget>
    <widget class="QPushButton" name="sortDates">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>70</y>
+      <x>330</x>
+      <y>770</y>
       <width>92</width>
       <height>31</height>
      </rect>
@@ -452,7 +488,6 @@ color: rgb(21, 21, 21);</string>
    <zorder>hwIcon</zorder>
    <zorder>dateLabel</zorder>
    <zorder>addButton</zorder>
-   <zorder>addWidget</zorder>
    <zorder>sortDates</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">

@@ -7,5 +7,7 @@
         <file>Images/dashboard.png</file>
         <file>Images/homework.png</file>
         <file>Images/list.png</file>
+        <file>Images/highlighted dashboard.png</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>
