@@ -8,6 +8,9 @@
         <file>Images/homework.png</file>
         <file>Images/list.png</file>
         <file>Images/highlighted dashboard.png</file>
+        <file>Images/highlighted book.png</file>
+        <file>Images/Highlighted List.png</file>
+        <file>Images/tick (1).png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

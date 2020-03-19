@@ -59,6 +59,14 @@ private slots:
 
     void addLayout(QLayout *layout, QVector<TaskInfo> taskInfo);
 
+    void on_dashIcon2_clicked();
+
+    void on_taskIcon3_clicked();
+
+    void on_dashIcon3_clicked();
+
+    void on_hwIcon3_clicked();
+
 private:
     Ui::MainWindow *ui;
 

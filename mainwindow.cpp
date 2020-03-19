@@ -269,3 +269,23 @@ void MainWindow::addLayout(QLayout *layout, QVector<TaskInfo> taskInfo)
         }
     }
 }
+
+void MainWindow::on_dashIcon2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_taskIcon3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_dashIcon3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_hwIcon3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
