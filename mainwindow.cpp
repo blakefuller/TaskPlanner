@@ -4,12 +4,17 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , timer(new QTimer)
 {
     ui->setupUi(this);
     setCurrentDate();
     ui->addWidget->hide();
-    homeworks.clear();
-    tasks.clear();
+
+    // activate due date checking every minute
+    connect(timer, SIGNAL(timeout()),
+            this, SLOT(setCurrentDate()));
+    setCurrentDate();
+    timer->start(60000);
 }
 
 MainWindow::~MainWindow()
@@ -56,6 +61,7 @@ void MainWindow::setCurrentDate()
     //display system date
     ui->dateLabel->setText(dateString);
 
+    this->dueDateChecker();
 }
 
 // checks if tasks are due
@@ -67,19 +73,19 @@ void MainWindow::dueDateChecker()
 
     // iterates through every item in taskDates and homeworkDates
     // and compares it to the current date if they are due or not
-    for (int i = 0; i < tasks.length(); i++)
+    for (int i = 0; i < homeworkInfo.length(); i++)
     {
-        if(taskDates[i] <= curDate)
+        if(homeworkInfo[i].date <= curDate)
         {
-            dueTasks += tasks[i] + "\n";
+            dueHomework += homeworkInfo[i].title + " " + homeworkInfo[i].date.toString("MM/dd/yyyy") + "\n";
         }
     }
 
-    for (int i = 0; i < homeworks.length(); i++)
+    for (int i = 0; i < taskInfo.length(); i++)
     {
-        if(homeworkDates[i] <= curDate)
+        if(taskInfo[i].date <= curDate)
         {
-            dueHomework += homeworks[i] + "\n";
+            dueTasks += taskInfo[i].title + " " + taskInfo[i].date.toString("MM/dd/yyyy") + "\n";
         }
     }
 
@@ -117,7 +123,7 @@ void MainWindow::on_taskAdd_clicked()
         this->addLayout(ui->taskFullLayout, taskInfo);
     }
 
-    this->dueDateChecker();
+    //this->dueDateChecker();
 }
 
 void MainWindow::on_homeworkAdd_clicked()
@@ -141,7 +147,7 @@ void MainWindow::on_homeworkAdd_clicked()
 
     }
 
-    this->dueDateChecker();
+    //this->dueDateChecker();
 }
 
 void MainWindow::sortDate(QVector<HomeworkInfo> &homeworkInfo)

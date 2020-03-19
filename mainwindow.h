@@ -7,6 +7,8 @@
 #include <QStringList>
 #include <vector>
 #include <QDebug>
+#include <QTime>
+#include <QTimer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -71,12 +73,8 @@ private:
     Ui::MainWindow *ui;
 
     QString dateString;
-
-    QVector <QString> homeworks;
-    QVector <QDate> homeworkDates;
-    QVector <QString> tasks;
-    QVector <QDate> taskDates;
     QDate curDate;
+    QTimer *timer;
 
     QVector <HomeworkInfo> homeworkInfo;
     QVector <TaskInfo> taskInfo;
