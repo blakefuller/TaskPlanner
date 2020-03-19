@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>Images/5cb0633d80f2cf201a4c3253.png</file>
+        <file>Images/add.png</file>
+        <file>Images/checklist.png</file>
+        <file>Images/cube dashboard.png</file>
+        <file>Images/dashboard.png</file>
+        <file>Images/homework.png</file>
+        <file>Images/list.png</file>
+        <file>Images/highlighted dashboard.png</file>
+        <file>Images/highlighted book.png</file>
+        <file>Images/Highlighted List.png</file>
+        <file>Images/tick (1).png</file>
+        <file>Images/aesthetic touches.png</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>
