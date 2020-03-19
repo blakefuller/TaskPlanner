@@ -11,6 +11,7 @@
         <file>Images/highlighted book.png</file>
         <file>Images/Highlighted List.png</file>
         <file>Images/tick (1).png</file>
+        <file>Images/aesthetic touches.png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>
