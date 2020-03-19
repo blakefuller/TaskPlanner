@@ -27,7 +27,7 @@
      <string notr="true">background-color:transparent;</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="dashPage">
      <widget class="QLabel" name="assignmentLabel">
@@ -198,7 +198,7 @@ border-image: url(:/Images/Images/aesthetic touches.png);</string>
      <widget class="QLabel" name="assignmentLabel_2">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>30</x>
         <y>10</y>
         <width>151</width>
         <height>41</height>
@@ -263,6 +263,23 @@ border-image: url(:/Images/Images/list.png);</string>
        <string/>
       </property>
      </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>31</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:transparent;
+border-image: url(:/Images/Images/aesthetic touches.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="taskPage">
      <widget class="QWidget" name="verticalLayoutWidget_4">
@@ -279,7 +296,7 @@ border-image: url(:/Images/Images/list.png);</string>
      <widget class="QLabel" name="taskslabel_2">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>30</x>
         <y>20</y>
         <width>51</width>
         <height>21</height>
@@ -339,6 +356,23 @@ background-color:transparent;</string>
       <property name="styleSheet">
        <string notr="true">background-color:transparent;
 border-image: url(:/Images/Images/homework.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>31</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:transparent;
+border-image: url(:/Images/Images/aesthetic touches.png);</string>
       </property>
       <property name="text">
        <string/>
@@ -452,7 +486,7 @@ font: 8pt &quot;Century Gothic&quot;;
       <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <property name="elideMode">
       <enum>Qt::ElideNone</enum>
